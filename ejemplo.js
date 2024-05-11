@@ -153,15 +153,15 @@ let CostoTotal
 if(tenis >=1 && tenis <=3 && tallas >=35 && tallas <=44 && cantidadTenis >=1 && cantidadTenis <=5){ 
     switch(tenis){
         case 1:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${clasicos - descuento}`)
+            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
         break
         }
         case 2:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${running - descuento}`)
+            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
             break
         }
         case 3:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${basketball - descuento}`)
+            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
             break
             }
         default:{
