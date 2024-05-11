@@ -171,3 +171,97 @@ if(tenis >=1 && tenis <=3 && tallas >=35 && tallas <=44 && cantidadTenis >=1 && 
     } else {
     alert("valores incorrectos, recuere: 1 para Tenis Clasicos 2 para Tenis Running 3 para Tenis Basketball", "solo manejamos tallas de 35 a 44", "solo vendemos un maximo de 5 pares de tenis por usuario")
     }
+
+    /*Ejercicio 4:
+    Enunciado: Se requiere un sistema para una fábrica de escobas que permita seleccionar modelos, materiales y
+    opciones para cotizar el producto según las especificaciones del cliente.
+    Requisitos:
+    • El usuario debe poder seleccionar el modelo de escoba entre:
+    • Escoba durax
+    • Escoba suavex
+    • cepillox
+    • Para la fabricación se utilizan dos tipos de materiales:
+    • Cerdas sintéticasx
+    • Cerdas naturalesx
+    • El usuario puede escoger opciones adicionales como mango largo o gancho en la punta
+    • El sistema debe calcular el precio de cada configuración según las siguientes tarifas:
+    • Escoba dura sintética: $8.000
+    • Escoba dura natural: $10.000
+    • cepillo sintético: $12.000
+    • cepillo natural: $15.000
+    • Mango largo: $2.000 adicionalesx
+    • Gancho en punta: $500 adicionalesx
+    • El usuario indica la cantidad de escobas a cotizar.
+    Reglas de negocio:
+    • Solo se permite un tipo de material por producto
+    • No se pueden combinar mango largo y gancho en punta
+    • La cantidad mínima de fabricación es 3 escobas, la máxima 30
+    • En caso de selección inválida mostrar mensaje de error.*/
+
+let tipoEscoba = parseInt(prompt("1 para Escoba dura 2 para Escoba suave 3 par Cepillo"))
+alert(`escogiste ${tipoEscoba}`)
+let tipoMaterial = parseInt(prompt("1 para cerdas sinteticas 2 cerdas naturales"))
+alert(`escogiste ${tipoMaterial}`)
+let tipoAdiciones = parseInt(prompt("1 para Mango largo 2 para Gancho punta"))
+alert(`escogiste ${tipoAdiciones}`)
+let cantidadEscobas = parseInt(prompt("Ingrese la cantidad de escobas a comprar(3-30)"))
+alert(`escogiste ${cantidadEscobas}`)
+
+
+let escobaDuraSintetica = 8000
+let escobaDuraNatural = 10000
+let escobaSuaveSintetica = 9000
+let escobaSuaveNatural = 11000
+let cepilloSintetico = 12000
+let cepilloNatural = 15000
+
+let adiciones
+let mangoLargo = 2000
+let ganchoEnLaPunta = 500
+
+adiciones = tipoAdiciones = 1? mangoLargo * cantidadEscobas: tipoAdiciones = 2? ganchoEnLaPunta * cantidadEscobas: 0  
+
+let pagoCompleto
+
+if(`${tipoEscoba >= 1 && tipoEscoba <= 3}` + `${tipoMaterial >= 1 && tipoMaterial <= 2}` + `${tipoAdiciones >= 1 && tipoAdiciones <=2}` + `${cantidadEscobas >=3 && cantidadEscobas <=30}`){ 
+    switch(tipoEscoba){
+        case 1:{if (tipoMaterial ==1){(
+            pagoCompleto = (escobaDuraSintetica * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else if (tipoMaterial ==2){(
+            pagoCompleto = (escobaDuraNatural * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else {
+                alert("valores incorrectos")
+            }
+        break
+        }
+        case 2:{if (tipoMaterial ==1){(
+            pagoCompleto = (escobaSuaveSintetica * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else if (tipoMaterial ==2){(
+            pagoCompleto = (escobaSuaveNatural * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else {
+                alert("valores incorrectos")
+            }
+        break
+        }
+        case 3:{if (tipoMaterial ==1){(
+            pagoCompleto = (cepilloSintetico * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else if (tipoMaterial ==2){(
+            pagoCompleto = (cepilloNatural * cantidadEscobas) + adiciones)
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            } else {
+            alert(`el costo a pagar total es ${pagoCompleto}`)
+            }
+        break
+        }
+        default:{
+            alert("opcion incorrecta")
+        }
+        }
+    } else {
+    alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 par Cepillo" + "1 para cerdas sinteticas 2 cerdas naturales" + "1 para Mango largo 2 para Gancho punta" + "la cantidad de escobas a comprar(3-30)")
+    }
