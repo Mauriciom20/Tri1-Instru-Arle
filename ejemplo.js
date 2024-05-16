@@ -132,136 +132,156 @@ if(cuotasPago >=1 && cuotasPago <=3){
     • No se puede seleccionar una talla fuera del rango permitido x
     • La cantidad mínima que se puede comprar es de 1 par x
     • La cantidad máxima es de 5 pares por transacción x
-    • Si se ingresa una opción inválida se debe mostrar un mensaje al usuario x*/
+    • Si se ingresa una opción inválida se debe mostrar un mensaje al usuario x
 
-const clasicos = 500000
-const running = 800000
-const basketball = 1000000
+    let clasicos = 500000
+    let running = 800000
+    let basketball = 1000000
+    
+    let tenis = parseInt(prompt("1 Tenis Clasicos 2 Tenis Running 3 Tenis Basketball)"))
+    let tallas = parseInt(prompt("Ingrese una talla entre 35 y 44"))
+    let cantidadTenis = parseInt(prompt("Ingrese cuantos Tenis desea comprar(maximo 5)"))
+    
+    let descuentoClasicos = (clasicos * cantidadTenis) * 0.10
+    let descuentoRunning = (running * cantidadTenis) * 0.10
+    let descuentoBasketball = (basketball * cantidadTenis) * 0.10
+    
+    //let descuento = console.log(cantidadTenis >= 3? (tenis == 1? descuentoClasicos: tenis == 2? descuentoRunning: tenis == 3? descuentoBasketball : Number(0) ):Number(0))
+    let valorTenis = tenis == 1? console.log(clasicos * cantidadTenis): tenis == 2? console.log(running * cantidadTenis): tenis == 3? console.log(basketball * cantidadTenis):alert("Error")
+    let valorDescuento = tenis == 1? console.log(clasicos - descuentoClasicos): tenis == 2? console.log(running - descuentoRunning): tenis == 3? console.log(basketball - descuentoBasketball):alert("Error")
+    let costoTotal
 
-let tenis = Number(prompt("1 Tenis Clasicos 2 Tenis Running 3 Tenis Basketball)"))
-let tallas = Number(prompt("Ingrese una talla entre 35 y 44"))
-let cantidadTenis = Number(prompt("Ingrese cuantos Tenis desea comprar(maximo 5)"))
-
-let descuentoClasicos = clasicos * 0.10
-let descuentoRunning = running * 0.10
-let descuentoBasketball = basketball * 0.10
-
-let descuento =  cantidadTenis > 3? (tenis = 1? clasicos - descuentoClasicos: tenis = 2? running - descuentoRunning : tenis = 3? basketball - descuentoBasketball:console.log("se compraron menos de 3 pares de tenis, no hay descuento")):0
-let costo 
-let CostoTotal
-
-if(tenis >=1 && tenis <=3 && tallas >=35 && tallas <=44 && cantidadTenis >=1 && cantidadTenis <=5){ 
-    switch(tenis){
-        case 1:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
-        break
+    if(tenis >=1 && tenis <=3 && tallas >=35 && tallas <=44 && cantidadTenis >=1 && cantidadTenis <=5){ 
+        switch(tenis){
+            case 1:  {cantidadTenis >= 3 && tenis == 1?
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${(clasicos * cantidadTenis) - descuentoClasicos}`):
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${clasicos * cantidadTenis}`)
+                break
+                }
+            case 2: {cantidadTenis >= 3 && tenis == 2?
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${(running * cantidadTenis) - descuentoRunning}`):
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${running * cantidadTenis}`)
+                break
+                }
+            case 3:{cantidadTenis >= 3 && tenis == 3?
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${basketball * cantidadTenis - descuentoBasketball}`):
+                costoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${basketball * cantidadTenis}`)
+                break
+                }
+            default:{
+                alert("opcion incorrecta")
+            }
+            }
+        } else {
+        alert("valores incorrectos, recuere: 1 para Tenis Clasicos 2 para Tenis Running 3 para Tenis Basketball", "solo manejamos tallas de 35 a 44", "solo vendemos un maximo de 5 pares de tenis por usuario")
+        }*/
+    
+        /*Ejercicio 4:
+        Enunciado: Se requiere un sistema para una fábrica de escobas que permita seleccionar modelos, materiales y
+        opciones para cotizar el producto según las especificaciones del cliente.
+        Requisitos:
+        • El usuario debe poder seleccionar el modelo de escoba entre:
+        • Escoba durax
+        • Escoba suavex
+        • cepillox
+        • Para la fabricación se utilizan dos tipos de materiales:
+        • Cerdas sintéticasx
+        • Cerdas naturalesx
+        • El usuario puede escoger opciones adicionales como mango largo o gancho en la punta
+        • El sistema debe calcular el precio de cada configuración según las siguientes tarifas:
+        • Escoba dura sintética: $8.000
+        • Escoba dura natural: $10.000
+        • cepillo sintético: $12.000
+        • cepillo natural: $15.000
+        • Mango largo: $2.000 adicionalesx
+        • Gancho en punta: $500 adicionalesx
+        • El usuario indica la cantidad de escobas a cotizar.
+        Reglas de negocio:
+        • Solo se permite un tipo de material por producto
+        • No se pueden combinar mango largo y gancho en punta
+        • La cantidad mínima de fabricación es 3 escobas, la máxima 30
+        • En caso de selección inválida mostrar mensaje de error.
+    
+    let tipoEscoba = Number(prompt("1 para Escoba dura 2 para Escoba suave 3 para Cepillo"))
+    if (tipoEscoba >= 1 && tipoEscoba <= 3) {
+        alert(`Escogiste ${tipoEscoba}`)
+        } else {
+        alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 para Cepillo)")
         }
-        case 2:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
+    let tipoMaterial = Number(prompt("1 para cerdas sinteticas 2 cerdas naturales"))
+    if (tipoMaterial >= 1 && tipoMaterial <= 2) {
+        alert(`Escogiste ${tipoMaterial}`)
+        } else {
+            alert("valores incorrectos, (1 para cerdas sinteticas 2 cerdas naturales)")
+        }
+    let tipoAdiciones = Number(prompt("1 para Mango largo 2 para Gancho punta"))
+    if (tipoAdiciones >= 1 && tipoAdiciones <= 2) {
+        alert(`Escogiste ${tipoAdiciones}`)
+        } else {
+            alert("valores incorrectos, (1 para Mango largo 2 para Gancho punta)")
+        }
+    let cantidadEscobas = Number(prompt("Ingrese la cantidad de escobas a comprar(3-30)"))
+    if(cantidadEscobas >=3 && cantidadEscobas <=30){
+        alert(`Escogiste ${cantidadEscobas}  Escobas`)
+        } else {
+            alert("valores incorrectos, (la cantidad de escobas que se pueden comprar(3-30)")
+        }
+    
+    
+    let escobaDuraSintetica = 8000
+    let escobaDuraNatural = 10000
+    let escobaSuaveSintetica = 9000
+    let escobaSuaveNatural = 11000
+    let cepilloSintetico = 12000
+    let cepilloNatural = 15000
+    
+    let adiciones
+    let mangoLargo = 2000
+    let ganchoEnLaPunta = 500
+    
+    adiciones = tipoAdiciones = 1? mangoLargo * cantidadEscobas: tipoAdiciones = 2? ganchoEnLaPunta * cantidadEscobas: 0  
+    
+    let pagoCompleto
+    
+    if(`${tipoEscoba >= 1 && tipoEscoba <= 3}` + `${tipoMaterial >= 1 && tipoMaterial <= 2}` + `${tipoAdiciones >= 1 && tipoAdiciones <=2}` + `${cantidadEscobas >=3 && cantidadEscobas <=30}`){ 
+        switch(tipoEscoba){
+            case 1:{if (tipoMaterial ==1){(
+                pagoCompleto = (escobaDuraSintetica * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else if (tipoMaterial ==2){(
+                pagoCompleto = (escobaDuraNatural * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else {
+                    alert("valores incorrectos")
+                }
             break
-        }
-        case 3:{
-            CostoTotal = alert(`Tus ${cantidadTenis} Tenis Clasicos talla: ${tallas} valen: ${descuento}`)
+            }
+            case 2:{if (tipoMaterial ==1){(
+                pagoCompleto = (escobaSuaveSintetica * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else if (tipoMaterial ==2){(
+                pagoCompleto = (escobaSuaveNatural * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else {
+                    alert("valores incorrectos")
+                }
             break
             }
-        default:{
-            alert("opcion incorrecta")
-        }
-        }
-    } else {
-    alert("valores incorrectos, recuere: 1 para Tenis Clasicos 2 para Tenis Running 3 para Tenis Basketball", "solo manejamos tallas de 35 a 44", "solo vendemos un maximo de 5 pares de tenis por usuario")
-    }
-
-    /*Ejercicio 4:
-    Enunciado: Se requiere un sistema para una fábrica de escobas que permita seleccionar modelos, materiales y
-    opciones para cotizar el producto según las especificaciones del cliente.
-    Requisitos:
-    • El usuario debe poder seleccionar el modelo de escoba entre:
-    • Escoba durax
-    • Escoba suavex
-    • cepillox
-    • Para la fabricación se utilizan dos tipos de materiales:
-    • Cerdas sintéticasx
-    • Cerdas naturalesx
-    • El usuario puede escoger opciones adicionales como mango largo o gancho en la punta
-    • El sistema debe calcular el precio de cada configuración según las siguientes tarifas:
-    • Escoba dura sintética: $8.000
-    • Escoba dura natural: $10.000
-    • cepillo sintético: $12.000
-    • cepillo natural: $15.000
-    • Mango largo: $2.000 adicionalesx
-    • Gancho en punta: $500 adicionalesx
-    • El usuario indica la cantidad de escobas a cotizar.
-    Reglas de negocio:
-    • Solo se permite un tipo de material por producto
-    • No se pueden combinar mango largo y gancho en punta
-    • La cantidad mínima de fabricación es 3 escobas, la máxima 30
-    • En caso de selección inválida mostrar mensaje de error.*/
-
-let tipoEscoba = parseInt(prompt("1 para Escoba dura 2 para Escoba suave 3 par Cepillo"))
-alert(`escogiste ${tipoEscoba}`)
-let tipoMaterial = parseInt(prompt("1 para cerdas sinteticas 2 cerdas naturales"))
-alert(`escogiste ${tipoMaterial}`)
-let tipoAdiciones = parseInt(prompt("1 para Mango largo 2 para Gancho punta"))
-alert(`escogiste ${tipoAdiciones}`)
-let cantidadEscobas = parseInt(prompt("Ingrese la cantidad de escobas a comprar(3-30)"))
-alert(`escogiste ${cantidadEscobas}`)
-
-
-let escobaDuraSintetica = 8000
-let escobaDuraNatural = 10000
-let escobaSuaveSintetica = 9000
-let escobaSuaveNatural = 11000
-let cepilloSintetico = 12000
-let cepilloNatural = 15000
-
-let adiciones
-let mangoLargo = 2000
-let ganchoEnLaPunta = 500
-
-adiciones = tipoAdiciones = 1? mangoLargo * cantidadEscobas: tipoAdiciones = 2? ganchoEnLaPunta * cantidadEscobas: 0  
-
-let pagoCompleto
-
-if(`${tipoEscoba >= 1 && tipoEscoba <= 3}` + `${tipoMaterial >= 1 && tipoMaterial <= 2}` + `${tipoAdiciones >= 1 && tipoAdiciones <=2}` + `${cantidadEscobas >=3 && cantidadEscobas <=30}`){ 
-    switch(tipoEscoba){
-        case 1:{if (tipoMaterial ==1){(
-            pagoCompleto = (escobaDuraSintetica * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else if (tipoMaterial ==2){(
-            pagoCompleto = (escobaDuraNatural * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else {
-                alert("valores incorrectos")
+            case 3:{if (tipoMaterial ==1){(
+                pagoCompleto = (cepilloSintetico * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else if (tipoMaterial ==2){(
+                pagoCompleto = (cepilloNatural * cantidadEscobas) + adiciones)
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                } else {
+                alert(`el costo a pagar total es ${pagoCompleto}`)
+                }
+            break
             }
-        break
-        }
-        case 2:{if (tipoMaterial ==1){(
-            pagoCompleto = (escobaSuaveSintetica * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else if (tipoMaterial ==2){(
-            pagoCompleto = (escobaSuaveNatural * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else {
-                alert("valores incorrectos")
+            default:{
+                alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 para Cepillo)" + "(1 para cerdas sinteticas 2 cerdas naturales)" + "(1 para Mango largo 2 para Gancho punta)" + "(la cantidad de escobas a comprar(3-30)")
             }
-        break
-        }
-        case 3:{if (tipoMaterial ==1){(
-            pagoCompleto = (cepilloSintetico * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else if (tipoMaterial ==2){(
-            pagoCompleto = (cepilloNatural * cantidadEscobas) + adiciones)
-            alert(`el costo a pagar total es ${pagoCompleto}`)
-            } else {
-            alert(`el costo a pagar total es ${pagoCompleto}`)
             }
-        break
-        }
-        default:{
-            alert("opcion incorrecta")
-        }
-        }
-    } else {
-    alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 par Cepillo" + "1 para cerdas sinteticas 2 cerdas naturales" + "1 para Mango largo 2 para Gancho punta" + "la cantidad de escobas a comprar(3-30)")
-    }
+        } else {
+        alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 para Cepillo)" + "(1 para cerdas sinteticas 2 cerdas naturales)" + "(1 para Mango largo 2 para Gancho punta)" + "(la cantidad de escobas a comprar(3-30)")
+        }*/
