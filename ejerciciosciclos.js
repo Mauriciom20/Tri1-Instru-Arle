@@ -76,3 +76,26 @@ do{
 //6. Usando un cilo imprima los números 3,6,9,12
 //7. Imprima la palabra “hola” 5 veces
 //8. Imprima los números del 1 al 7 sin imprimir el 3
+
+//4. Imprimir los números del 10 al 5
+
+/*let i = 10;
+while(i >= 5 && i <= 10){
+    console.log(i)
+    i-=1
+};*/
+
+/*for(let i = 10; i >= 5 && i <= 10; i-=1){
+    console.log(i)
+};*/
+
+/*let f = 10
+do{
+    console.log(f)
+    f-=1
+}while(f >= 5 && f <=10)*/
+
+//5. Repita un menú de 3 opciones hasta que el usuario digite el numero 4
+//6. Usando un cilo imprima los números 3,6,9,12
+//7. Imprima la palabra “hola” 5 veces
+//8. Imprima los números del 1 al 7 sin imprimir el 3
