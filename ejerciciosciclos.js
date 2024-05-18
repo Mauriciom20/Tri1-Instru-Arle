@@ -45,14 +45,31 @@ console.log(suma)*/
 
 //3. Escribe un programa que imprima la tabla de multiplicar del número ingresado por el usuario.
 
-let i = parseInt(prompt("Ingrese el numero del que quiere ver su tabla de multiplicar"))
-let suma = 1
-let f = 1
-while(i >= 1 && suma <=100 && f >=1 && f <=10){
+/*let i = parseInt(prompt("Ingrese el numero del que quiere ver su tabla de multiplicar"));
+let suma = 1;
+let f = 1;
+while(f <=10){
     suma = i * f
     f++
     console.log(suma)
-}
+};*/
+
+/*let i = parseInt(prompt("Ingrese el numero del que quiere ver su tabla de multiplicar"))
+let suma = 1
+let f =1
+for(i; f <=10 ; f++){
+    suma = i * f;
+    console.log(suma);
+}*/
+
+/*let f = parseInt(prompt("Ingrese el numero del que quiere ver su tabla de multiplicar"))
+let i = 1
+let suma = 1
+do{
+    suma= i * f
+    i++
+    console.log(suma)
+}while(i <= 10)*/
 
 //4. Imprimir los números del 10 al 5
 //5. Repita un menú de 3 opciones hasta que el usuario digite el numero 4
