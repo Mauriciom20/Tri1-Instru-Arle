@@ -49,7 +49,7 @@ let numero = parseInt(prompt("Ingrese el numero del que quiere ver su tabla de m
 
 let suma = 0
 
-while(numero < 10){
+while(numero <= 10){
     suma *= numero
     (numero++)
 }
