@@ -285,3 +285,88 @@ if(cuotasPago >=1 && cuotasPago <=3){
         } else {
         alert("valores incorrectos, (1 para Escoba dura 2 para Escoba suave 3 para Cepillo)" + "(1 para cerdas sinteticas 2 cerdas naturales)" + "(1 para Mango largo 2 para Gancho punta)" + "(la cantidad de escobas a comprar(3-30)")
         }*/
+/*Ejercicio 5:
+        Enunciado: Se requiere un sistema que permita gestionar los préstamos de libros en una biblioteca pública. Los 
+        usuarios podrán seleccionar libros a solicitar y el sistema calculará las fechas y condiciones de préstamo.
+        Requisitos:
+        • El sistema clasifica los libros en tres categorías:
+        • Bestsellers (novedades)
+        • Literatura
+        • Académicos
+        • Cada categoría tiene una tarifa de préstamo por día diferente:
+        • Bestsellers: $500 por día
+        • Literatura: $100 por día
+        • Académicos: préstamo gratuito
+        • El usuario selecciona los libros a solicitar, ingresando título y categoría
+        • El usuario indica la cantidad de días que necesita el préstamo
+        • El sistema calcula el costo del préstamo basado en:
+        • Categoría del libro
+        • Número de días solicitado
+        • Para préstamos mayores a 10 días se aplica 10% de descuento
+        Reglas de negocio:
+        • El préstamo puede ser de 1 a 30 días
+        • Se pueden solicitar máximo 5 libros por préstamo
+        • Académicos siempre son gratuitos independiente de los días*/
+        /*Ejercicio 6:
+        Enunciado: Se requiere un sistema para un servicio de entrega a domicilio que permita a los clientes pedir comida 
+        de diferentes restaurantes, seleccionar opciones y calcular el valor total del pedido.
+        Requisitos:
+        • El usuario puede elegir restaurantes asociados como:
+        • Hamburguesas
+        • Pizzería
+        • Comida China
+        • Cada restaurante tiene varias opciones de menú con precios establecidos. Por ejemplo:
+        • Hamburguesa simple ($25000)
+        • Pizza familia ($85000)
+        • Fideos con pollo ($18000)
+        • El usuario selecciona el restaurante, el menú deseado y la cantidad para cada opción.
+        • El sistema calcula el subtotal por ítems y el total del pedido incluyendo:
+        • Costo de los artículos
+        • Costo de envío ($5000)
+        • Se muestra al usuario el resumen del pedido y valor total a pagar.
+        Reglas de negocio:
+        • Solo se puede pedir de un restaurant a la vez.
+        • Mínimo de compra $23000 por pedido.
+        • Tiempo de delivery 45 minutos a 1 hora.
+        • El pago solo puede ser en efectivo o con tarjeta débito/crédito.*/
+        /*Ejercicio 7:
+        Enunciado: Se requiere un sistema de venta de boletas para un concierto que permita seleccionar la ubicación en 
+        el escenario y calcular los costos de acuerdo con la localidad.
+        Requisitos:
+        • El escenario tiene las siguientes localidades:
+        • General
+        • Preferencial
+        • VIP
+        • Los precios para cada localidad son:
+        • General: $50000
+        • Preferencial: $150000
+        • VIP: $300000
+        • El usuario selecciona:
+        • Cantidad de boletas
+        • Localidad deseada
+        • El sistema calcula el total a pagar incluyendo adicionales:
+        • Impuestos del 10% sobre el precio
+        • Cargo por servicio por boleta de $5000
+        • El usuario visualiza el desglose de cobros y total a pagar.
+        Reglas de negocio:
+        • Las localidades tienen capacidad limitada de entradas disponibles
+        • Los descuentos y promociones no aplican para la localidad VIP
+        • Solo se vende un máximo de 5 boletas por transacción
+        • La compra puede ser pagada en efectivo o con tarjeta de crédito*/
+        /*Ejercicio 8:
+        Enunciado: Se requiere un sistema para que los usuarios puedan apostar en carreras de carros, seleccionando 
+        pilotos, montos y tipos de apuestas.
+        Requisitos:
+        • El usuario debe poder seleccionar carreras disponibles con sus respectivos pilotos y cuotas. Por ejemplo:
+        • Carrera 1: (Piloto A (1.5), Piloto B (2.3), Piloto C(1.8))
+        • El usuario puede hacer dos tipos de apuestas:
+        • Ganador de la carrera
+        • Posiciones exactas (seleccionar 1ro y 2do puesto)
+        • El sistema debe permitir ingresar el monto a apostar y registrar la apuesta.
+        • Una vez terminada la carrera, el sistema determina si el usuario ganó y calcula las ganancias según las 
+        cuotas.
+        Reglas de negocio:
+        • El usuario solo puede apostar en carreras habilitadas por el sistema.
+        • El monto mínimo por apuesta es $10000
+        • El monto máximo por evento es $1000.000
+        • Solo mayores de edad pueden apostar según su número de identificación*/
