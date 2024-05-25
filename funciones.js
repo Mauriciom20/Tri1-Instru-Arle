@@ -1,3 +1,4 @@
+/*Tipos de Funciones
 let a = 10
 let b = 5
 
@@ -21,3 +22,20 @@ function sumar4(){
     return a + b;
 }
 console.log(sumar4());
+
+function sumar(){
+    console.log(a+b)
+}
+sumar()
+function restar(){
+    console.log(a-b)
+}
+restar()
+function multiplicar(){
+    console.log(a*b)
+}
+multiplicar()
+function dividir(){
+    console.log(a/b)
+}
+dividir()*/
