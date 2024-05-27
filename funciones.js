@@ -40,7 +40,37 @@ function dividir(){
 }
 dividir()*/
 //1. Calcular el factorial de un número: Crea una función que reciba un número entero positivo y devuelva su factorial. Utiliza un ciclo para calcular el resultado. 
+
+/*function factorial(positivo) {
+    if (positivo < 0) {
+        return "Error, Ingrese un numero positivo";
+    }
+    let resultado = 1;
+    for (let i = 1; i <= positivo; i++) {
+        resultado *= i;;
+        console.log(resultado);
+    }
+    return resultado;
+}
+let numero = parseInt(prompt("Ingrese el numero del que desea saber su factorial"));
+alert(`El factorial de ${numero} es: ${factorial(numero)}`);*/
+
 //2. Verificar si un número es primo: Crea una función que reciba un número entero y devuelva true si es primo, y false en caso contrario. Utiliza un ciclo y una condición para verificar si el número es divisible por otros números distintos de 1 y sí mismo. 
+
+/*function esPrimo(numero) {
+    if (numero <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+let numero = 17;
+console.log("¿El número " + numero + " es primo? " + esPrimo(numero));*/
 //3. Calcular la suma de dígitos de un número: Crea una función que reciba un número entero y devuelva la suma de sus dígitos. Utiliza un ciclo y una decisión para extraer los dígitos uno por uno y sumarlos. 
 //4. Generar una serie de Fibonacci hasta un límite: Crea una función que reciba un número entero n y devuelva un array con los n primeros números de la serie de Fibonacci. Utiliza un ciclo y una decisión para calcular los números de la serie. 
 //5. Invertir una cadena de texto: Crea una función que reciba una cadena de texto y devuelva la misma cadena, pero invertida. Utiliza un ciclo para recorrer la cadena de atrás hacia adelante y construir la nueva cadena invertida. 
